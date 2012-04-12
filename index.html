@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Linkedin-scraper by yatishmehta27</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Linkedin-scraper</h1>
+<p>Scrapes the  public profile of the linkedin page</p>
+        <p class="view"><a href="https://github.com/yatishmehta27/linkedin-scraper">View the Project on GitHub <small>yatishmehta27/linkedin-scraper</small></a></p>
+        <ul>
+          <li><a href="https://github.com/yatishmehta27/linkedin-scraper/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/yatishmehta27/linkedin-scraper/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/yatishmehta27/linkedin-scraper">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h3>Linkedin Scraper Gem.</h3>
+
+<p>This gem helps to scrape a public profile of  linkedin when the URL of the profile is given.It gives all the data from first name, last name, title, companies ,etc. </p>
+
+<pre><code>profile = Linkedin::Profile.get_profile('<a href="http://in.linkedin.com/pub/yatish-mehta/22/460/a86'">http://in.linkedin.com/pub/yatish-mehta/22/460/a86'</a>)
+</code></pre>
+
+<pre><code>profile.first_name          #the First name of the contact
+profile.last_name           #the last name of the contact
+profile.title               #the linkedin job title
+profile.location            #the location of the contact
+profile.country             #the country of the contact
+profile.industry            #the domain for which the contact belongs
+profile.past_companies
+#Array of hash containing its past job companies and job profile
+#Example
+#  [
+#    [0] {
+#          :past_title =&gt; "Intern",
+#        :past_company =&gt; "Sungard"
+#        },
+#    [1] {
+#          :past_title =&gt; "Software Developer",
+#        :past_company =&gt; "Microsoft"
+#        }
+#  ]
+profile.current_companies
+#Array of hash containing its current job companies and job profile
+#Example
+#  [
+#    [0] {
+#          :current_title =&gt; "Intern",
+#        :current_company =&gt; "Sungard"
+#        },
+#    [1] {
+#          :current_title =&gt; "Software Developer",
+#        :current_company =&gt; "Microsoft"
+#        }
+#  ]
+profile.linkedin_url        #url of the profile
+profile.recommended_visitors
+#Its the list of visitors "Viewers of this profile also viewed..."
+#attr_accessor :recommended_visitors = [
+#    [0] {
+#           :link =&gt;  href="<a href="http://in.linkedin.com/in/nxxxxxxxxxxd?trk=pub-pbmap">http://in.linkedin.com/in/nxxxxxxxxxxd?trk=pub-pbmap</a>",
+#           :name =&gt; "Nxxxxxh Axxxxd",
+#          :title =&gt; "Engineering Manager",
+#        :company =&gt; "Info Labs"
+#    },
+</code></pre>
+
+<h3>Authors and Contributors</h3>
+
+<p>You can follow me @yatish27 and on github at <a href="https://github.com/yatishmehta27/">https://github.com/yatishmehta27/</a> .You can also mail me at yatishmehta27@gmail.com</p>
+      </section>
+    </div>
+    <footer>
+      <p>Project maintained by <a href="https://github.com/yatishmehta27">yatishmehta27</a></p>
+      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
+    </footer>
+    <!--[if !IE]><script>fixScale(document);</script><!--<![endif]-->
+    
+  </body>
+</html>
